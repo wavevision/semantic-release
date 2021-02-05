@@ -1,0 +1,20 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: QA
+        run: yarn qa
+      - name: Release
+        run: yarn release

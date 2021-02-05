@@ -1,10 +1,11 @@
 name: 'Setup'
-description: 'Shared CI setup'
+description: 'Shared workflows setup'
 
 runs:
   using: 'composite'
   steps:
     - name: Setup nvm
+      shell: bash
       run: echo ::set-output name=NVMRC::$(cat .nvmrc)
       id: nvm
     - name: Setup Node.js
@@ -12,4 +13,5 @@ runs:
       with:
         node-version: ${{steps.nvm.outputs.NVMRC }}
     - name: Install dependencies
+      shell: bash
       run: yarn install
