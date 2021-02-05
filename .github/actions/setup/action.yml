@@ -4,8 +4,6 @@ description: 'Shared CI setup'
 runs:
   using: 'composite'
   steps:
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: Setup nvm
       run: echo ::set-output name=NVMRC::$(cat .nvmrc)
       id: nvm
