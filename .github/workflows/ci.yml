@@ -5,26 +5,12 @@ on:
   - pull_request
 
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup nvm
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{steps.nvm.outputs.NVMRC }}
-      - name: Install dependencies
-        run: yarn install
   qa:
     name: QA
-    needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Setup
+        uses: ./../setup.yml
       - name: QA
         run: yarn qa
   release:
@@ -32,6 +18,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      - name: Setup
+        uses: ./../setup.yml
       - name: Release
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: yarn release
