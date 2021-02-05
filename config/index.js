@@ -44,7 +44,7 @@ const makeConfig = function (options) {
     ],
   ];
   if (options.npm && options.npm.enabled) {
-    plugins.push(['@semantic-release/npm', { tarballDir: false }]);
+    plugins.push(['@semantic-release/npm']);
   }
   if (options.git && options.git.enabled) {
     plugins.push([
