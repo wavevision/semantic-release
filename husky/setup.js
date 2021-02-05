@@ -3,4 +3,11 @@
 
 const { run, setup } = require('../utils/setup');
 
-run(setup(__dirname, '.huskyrc.json', 'yarn husky install'));
+run(
+  setup({
+    command: 'yarn husky install',
+    file: 'commit-msg',
+    sourceDir: __dirname,
+    targetDir: '.husky',
+  }),
+);

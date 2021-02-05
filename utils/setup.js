@@ -28,20 +28,22 @@ const run = setup => {
 };
 
 /**
- * @param {string} dir
- * @param {string} file
- * @param {string} command
+ * @param {{file: string, sourceDir: string, targetDir: (string|undefined), command: (string|undefined)}} options
  * @returns {Promise<string>}
  */
-const setup = async (dir, file, command) => {
+const setup = async options => {
   try {
-    const source = resolve(dir, file);
-    const target = resolve(process.cwd(), file);
+    const source = resolve(options.sourceDir, options.file);
+    const target = resolve(
+      process.cwd(),
+      options.targetDir || '',
+      options.file,
+    );
     copyFileSync(source, target);
-    execSync(command);
-    return `✓ ${file} setup successful`;
+    if (options.command) logSuccess(execSync(options.command).toString());
+    return `✓ ${options.file} setup successful`;
   } catch (e) {
-    throw new Error(`✖ ${file} setup failed: ${e.message}`);
+    throw new Error(`✖ ${options.file} setup failed: ${e.message}`);
   }
 };
 

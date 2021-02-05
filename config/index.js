@@ -55,7 +55,7 @@ const makeConfig = function (options) {
       },
     ]);
   }
-  plugins.push('@semantic-release/' + options.config);
+  plugins.push(`@semantic-release/${options.config}`);
   return {
     branches: options.branches,
     plugins: plugins,

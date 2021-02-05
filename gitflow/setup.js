@@ -5,4 +5,10 @@ const { run, setup } = require('../utils/setup');
 
 const FILE = '.gitconfig';
 
-run(setup(__dirname, FILE, 'git config --local include.path ../' + FILE));
+run(
+  setup({
+    command: `git config --local include.path ../${FILE}`,
+    file: FILE,
+    sourceDir: __dirname,
+  }),
+);
