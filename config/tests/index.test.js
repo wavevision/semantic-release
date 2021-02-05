@@ -47,7 +47,7 @@ test('makeConfig', function (t) {
           },
         },
       ],
-      ['@semantic-release/npm', { tarballDir: false }],
+      ['@semantic-release/npm'],
       [
         '@semantic-release/git',
         {
