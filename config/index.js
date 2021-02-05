@@ -20,8 +20,8 @@ const {
  *    minor: ({ exclude: string[], include: string[] }|string[]|undefined),
  *    patch: ({ exclude: string[], include: string[] }|string[]|undefined)
  *  }|undefined),
- *  templates: ({ notes: string, commit: string }|undefined),
- *  git: ({ enabled: boolean, assets: string[] }|undefined),
+ *  templates: ({ notes?: string, commit?: string }|undefined),
+ *  git: ({ enabled: boolean, assets?: string[] }|undefined),
  *  npm: ({ enabled: boolean }|undefined)
  * }} options
  * @returns {object}

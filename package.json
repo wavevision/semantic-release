@@ -2,7 +2,6 @@
   "name": "@wavevision/semantic-release",
   "version": "1.0.0",
   "description": "The Wavevision semantic release setup.",
-  "main": "index.js",
   "author": "Wavevision s.r.o <info@wavevision.com>",
   "contributors": [
     {
@@ -11,6 +10,30 @@
     }
   ],
   "license": "MIT",
+  "keywords": [
+    "commitizen",
+    "commitlint",
+    "gitflow",
+    "gitmoji",
+    "husky",
+    "semantic-release"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavevision/semantic-release.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wavevision/semantic-release/issues"
+  },
+  "homepage": "https://github.com/wavevision/semantic-release",
+  "files": [
+    "commitizen",
+    "commitlint",
+    "config",
+    "gitflow",
+    "husky",
+    "utils"
+  ],
   "bin": {
     "commit": "./commitizen/cli.js",
     "setup-gitflow": "./gitflow/setup.js",
