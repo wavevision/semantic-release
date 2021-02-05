@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: ./../setup.yml
+        uses: ./.github/actions/setup
       - name: QA
         run: yarn qa
   release:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: ./../setup.yml
+        uses: ./.github/actions/setup
       - name: Release
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: yarn release
