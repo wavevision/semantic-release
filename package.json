@@ -36,7 +36,6 @@
   },
   "scripts": {
     "build": "NODE_ENV=production run-s clean ts-build",
-    "ci": "run-s eslint prettier test-coverage",
     "clean": "rm -rf dist/*",
     "commit": "./commitizen/cli.js",
     "eslint": "eslint . --cache",
@@ -45,6 +44,8 @@
     "postinstall": "is-ci || husky install",
     "prettier": "prettier --check './**/*.{json,md}'",
     "prettier-fix": "yarn prettier --write",
+    "release": "semantic-release",
+    "qa": "run-s eslint prettier test-coverage",
     "test": "ava",
     "test-coverage": "nyc ava"
   }
