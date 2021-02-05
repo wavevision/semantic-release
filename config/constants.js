@@ -1,0 +1,9 @@
+exports.CONFIG_GITHUB = 'github';
+exports.CONFIG_GITLAB = 'gitlab';
+exports.GITLAB_BASE_URL = 'https://gitlab.com';
+exports.GITLAB_ISSUE_TEMPLATE = '{baseUrl}/{owner}/{repo}/-/issues/{ref}';
+exports.RELEASE_MESSAGE = ':bookmark: Release ${nextRelease.version} [skip ci]';
+exports.RULES = ['major', 'minor', 'patch'];
+exports.TAG_FORMAT = '${version}';
+exports.TEMPLATE_TYPE_COMMIT = 'commit';
+exports.TEMPLATE_TYPE_NOTES = 'notes';

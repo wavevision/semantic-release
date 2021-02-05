@@ -1,0 +1,16 @@
+[gitflow "branch"]
+	master = master
+	develop = development
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag =
+[gitflow "path"]
+	hooks = .husky
+[gitflow "hotfix.finish"]
+	notag = true
+[gitflow "release.finish"]
+	notag = true
