@@ -92,7 +92,7 @@ The `gitmoji` release rules are by default:
 - `minor` = `[:sparkles:]`
 - `patch` = `[:bug:, :ambulance:, :lock:]`
 
-#### Custom templates
+#### Templates
 
 The package contains a helper to stringify `.hbs` templates content from a folder you define. Use it as follows.
 
