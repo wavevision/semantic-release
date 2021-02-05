@@ -49,6 +49,7 @@ module.exports = {
         },
       },
       additionalProperties: false,
+      required: ['enabled'],
     },
     git: {
       description: 'Setup @semantic-release/git plugin',
@@ -71,6 +72,7 @@ module.exports = {
         },
       },
       additionalProperties: false,
+      required: ['enabled'],
     },
   },
   additionalProperties: false,
