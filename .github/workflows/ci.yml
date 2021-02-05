@@ -15,7 +15,6 @@ jobs:
         run: yarn qa
   release:
     name: Release
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Setup
