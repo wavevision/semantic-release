@@ -14,6 +14,7 @@ const {
 /**
  * @param {{
  *  config: string,
+ *  branches: string[],
  *  rules: ({
  *    major: ({ exclude: string[], include: string[] }|string[]|undefined),
  *    minor: ({ exclude: string[], include: string[] }|string[]|undefined),
@@ -56,6 +57,7 @@ const makeConfig = function (options) {
   }
   plugins.push('@semantic-release/' + options.config);
   return {
+    branches: options.branches,
     plugins: plugins,
     tagFormat: TAG_FORMAT,
   };

@@ -9,6 +9,13 @@ module.exports = {
       description: 'Mandatory config type',
       enum: [CONFIG_GITLAB, CONFIG_GITHUB],
     },
+    branches: {
+      description: 'Branches on which releases should happen',
+      type: 'array',
+      items: [{ type: 'string' }],
+      additionalItems: false,
+      minItems: 1,
+    },
     rules: {
       description: 'Gitmoji release rules',
       type: 'object',
@@ -67,5 +74,5 @@ module.exports = {
     },
   },
   additionalProperties: false,
-  required: ['config'],
+  required: ['config', 'branches'],
 };

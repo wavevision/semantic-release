@@ -15,6 +15,7 @@ const template = makeTemplate(__dirname, '..', 'templates');
 test('makeConfig', function (t) {
   const config = makeConfig({
     config: CONFIG_GITLAB,
+    branches: ['master'],
     rules: {
       major: { include: [':boom:'], exclude: [':sparkles:'] },
       minor: [':sparkles:'],
@@ -24,6 +25,7 @@ test('makeConfig', function (t) {
     npm: { enabled: true },
   });
   t.deepEqual(config, {
+    branches: ['master'],
     plugins: [
       [
         'semantic-release-gitmoji',
