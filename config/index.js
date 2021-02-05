@@ -1,14 +1,14 @@
 const schema = require('./schema');
 const {
-  makeIssueResolution: makeIssueResolution,
-  resolveTemplate: resolveTemplate,
-  validateOptions: validateOptions,
+  makeIssueResolution,
+  resolveTemplate,
+  validateOptions,
 } = require('./utils');
 const {
-  RELEASE_MESSAGE: RELEASE_MESSAGE,
-  TAG_FORMAT: TAG_FORMAT,
-  TEMPLATE_TYPE_COMMIT: TEMPLATE_TYPE_COMMIT,
-  TEMPLATE_TYPE_NOTES: TEMPLATE_TYPE_NOTES,
+  RELEASE_MESSAGE,
+  TAG_FORMAT,
+  TEMPLATE_TYPE_COMMIT,
+  TEMPLATE_TYPE_NOTES,
 } = require('./constants');
 
 /**
