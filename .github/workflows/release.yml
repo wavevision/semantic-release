@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: Setup node version
         run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
         id: nvm
