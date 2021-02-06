@@ -1,8 +1,16 @@
 name: QA
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+      - development
+    tags:
+      - '!**'
+  pull_request:
+    branches:
+      - master
+      - development
 
 jobs:
   qa:
