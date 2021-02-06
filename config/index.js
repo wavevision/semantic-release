@@ -16,12 +16,12 @@ const {
  *  config: string,
  *  branches: string[],
  *  rules: ({
- *    major: ({ exclude: string[], include: string[] }|string[]|undefined),
- *    minor: ({ exclude: string[], include: string[] }|string[]|undefined),
- *    patch: ({ exclude: string[], include: string[] }|string[]|undefined)
+ *    major: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined),
+ *    minor: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined),
+ *    patch: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined)
  *  }|undefined),
- *  templates: ({ notes?: string, commit?: string }|undefined),
- *  git: ({ enabled: boolean, assets?: string[] }|undefined),
+ *  templates: ({ notes: (string|undefined), commit: (string|undefined) }|undefined),
+ *  git: ({ enabled: boolean, assets: (string[]|undefined) }|undefined),
  *  npm: ({ enabled: boolean }|undefined)
  * }} options
  * @returns {object}
