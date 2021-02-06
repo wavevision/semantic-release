@@ -42,7 +42,7 @@ shape:
 
 ```typescript
 type Options = {
-  config: 'gitlab' | 'github'; // needed for default commit and issue resolution templates
+  config: 'gitlab' | 'github'; // needed to setup correct release plugin
   branches: string[]; // list of branches on which releases should happen
   rules?: {
     // map gitmoji to specific release types
