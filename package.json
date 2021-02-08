@@ -36,6 +36,7 @@
   ],
   "bin": {
     "commit": "./commitizen/cli.js",
+    "setup-commitizen": "./commitizen/setup.js",
     "setup-gitflow": "./gitflow/setup.js",
     "setup-husky": "./husky/setup.js"
   },

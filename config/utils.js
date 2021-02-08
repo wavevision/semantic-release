@@ -15,11 +15,12 @@ const {
  * @return {(object|undefined)}
  */
 const makeIssueResolution = options => {
-  if (options.config !== CONFIG_GITLAB) return undefined;
-  return {
-    baseUrl: GITLAB_BASE_URL,
-    template: GITLAB_ISSUE_TEMPLATE,
-  };
+  if (options.config === CONFIG_GITLAB) {
+    return {
+      baseUrl: GITLAB_BASE_URL,
+      template: GITLAB_ISSUE_TEMPLATE,
+    };
+  }
 };
 
 /**

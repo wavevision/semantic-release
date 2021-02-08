@@ -29,6 +29,7 @@ yarn add --dev @wavevision/semantic-release
 
 First, use setup scripts that come with this package.
 
+- `yarn setup-commitizen` – setup `commitizen` config
 - `yarn setup-gitflow` – setup `gitflow-avh` branches
 - `yarn setup-husky` – setup `husky` hooks for linting your commit messages
 
@@ -121,4 +122,4 @@ module.exports = require('@wavevision/semantic-release/commitlint');
 The package also contains bootstrapped `commitizen` CLI which will help you assemble valid `gitmoji` commit messages
 through a simple prompt. Simply run `yarn commit` and follow the steps.
 
-> **Note:** Scope, longer description, breaking change commit body and list of issues closed **are not required**.
+> **Note:** Longer description, breaking change commit body and list of issues closed **are not required**.
