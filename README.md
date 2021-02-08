@@ -83,7 +83,7 @@ module.exports = makeConfig({
 
 This will bootstrap `semantic-release` for GitHub repository in which releases will happen on `master` branch. Each new
 release will change `version` property inside `package.json` which will be then committed to the repository. Also, if
-your `package.json` **does not** set `private: true`, a `npm` package will be published.
+your `package.json` **does not** set `private: true`, an `npm` package will be published.
 
 > **Note:** See [this FAQ](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-set-the-access-level-of-the-published-npm-package) to learn about setting `npm` published package access.
 
@@ -101,7 +101,7 @@ The package contains a helper to stringify `.hbs` templates content from a folde
 const { makeTemplate } = require('@wavevision/semantic-release/config/utils');
 
 const template = makeTemplate('path', 'to', 'templates');
-template('notes'); // will return .hbs content from path/to/templates/notes.hbs
+template('notes'); // will return content from path/to/templates/notes.hbs
 ```
 
 #### Constants
