@@ -9,10 +9,5 @@ bootstrap({
   cliPath: resolve(process.cwd(), 'node_modules', 'commitizen'),
   config: {
     path: 'cz-emoji',
-    config: {
-      'cz-emoji': {
-        skipQuestions: ['body', 'scope'],
-      },
-    },
   },
 });

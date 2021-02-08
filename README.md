@@ -3,6 +3,8 @@
 
 [![QA](https://github.com/wavevision/semantic-release/workflows/QA/badge.svg)](https://github.com/wavevision/semantic-release/actions?query=workflow%3AQA)
 [![Release](https://github.com/wavevision/semantic-release/workflows/Release/badge.svg)](https://github.com/wavevision/semantic-release/actions?query=workflow%3ARelease)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![npm](https://img.shields.io/npm/v/@wavevision/semantic-release)](https://www.npmjs.com/package/@wavevision/semantic-release)
 
 Semantic Release setup for Wavevision apps to maintain conventional commits and releases
@@ -29,6 +31,7 @@ yarn add --dev @wavevision/semantic-release
 
 First, use setup scripts that come with this package.
 
+- `yarn setup-commitizen` – setup `commitizen` config
 - `yarn setup-gitflow` – setup `gitflow-avh` branches
 - `yarn setup-husky` – setup `husky` hooks for linting your commit messages
 
@@ -82,7 +85,7 @@ module.exports = makeConfig({
 
 This will bootstrap `semantic-release` for GitHub repository in which releases will happen on `master` branch. Each new
 release will change `version` property inside `package.json` which will be then committed to the repository. Also, if
-your `package.json` **does not** set `private: true`, a `npm` package will be published.
+your `package.json` **does not** set `private: true`, an `npm` package will be published.
 
 > **Note:** See [this FAQ](https://semantic-release.gitbook.io/semantic-release/support/faq#how-can-i-set-the-access-level-of-the-published-npm-package) to learn about setting `npm` published package access.
 
@@ -100,7 +103,7 @@ The package contains a helper to stringify `.hbs` templates content from a folde
 const { makeTemplate } = require('@wavevision/semantic-release/config/utils');
 
 const template = makeTemplate('path', 'to', 'templates');
-template('notes'); // will return .hbs content from path/to/templates/notes.hbs
+template('notes'); // will return content from path/to/templates/notes.hbs
 ```
 
 #### Constants
@@ -121,4 +124,4 @@ module.exports = require('@wavevision/semantic-release/commitlint');
 The package also contains bootstrapped `commitizen` CLI which will help you assemble valid `gitmoji` commit messages
 through a simple prompt. Simply run `yarn commit` and follow the steps.
 
-> **Note:** Scope, longer description, breaking change commit body and list of issues closed **are not required**.
+> **Note:** Longer description, breaking change commit body and list of issues closed **are not required**.

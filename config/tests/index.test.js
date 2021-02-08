@@ -12,7 +12,7 @@ const {
 
 const template = makeTemplate(__dirname, '..', 'templates');
 
-test('makeConfig', function (t) {
+test('makeConfig', t => {
   const config = makeConfig({
     config: CONFIG_GITLAB,
     branches: ['master'],
