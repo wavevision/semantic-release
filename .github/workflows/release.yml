@@ -32,3 +32,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn release
+      - name: Merge to development
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          target_branch: development
+          github_token: ${{ secrets.GH_TOKEN }}
