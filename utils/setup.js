@@ -1,4 +1,4 @@
-const { copyFileSync } = require('fs');
+const { copyFileSync, existsSync } = require('fs');
 const { execSync } = require('child_process');
 const { resolve } = require('path');
 
@@ -39,7 +39,7 @@ const setup = async options => {
       options.targetDir || '',
       options.file,
     );
-    copyFileSync(source, target);
+    if (!existsSync(target)) copyFileSync(source, target);
     if (options.command) logSuccess(execSync(options.command).toString());
     return `✓ ${options.file} setup successful`;
   } catch (e) {
