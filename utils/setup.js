@@ -3,6 +3,17 @@ const { execSync } = require('child_process');
 const { resolve } = require('path');
 
 /**
+ * @param {object} options
+ * @param {string} type
+ */
+const handleCommand = (options, type) => {
+  if (options.commands) {
+    const cmd = options.commands[type];
+    if (cmd) logSuccess(execSync(cmd).toString());
+  }
+};
+
+/**
  * @param {string} message
  * @returns {string}
  */
@@ -28,11 +39,12 @@ const run = setup => {
 };
 
 /**
- * @param {{file: string, sourceDir: string, targetDir: (string|undefined), command: (string|undefined)}} options
+ * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: ({ pre: (string|undefined), post: (string|undefined)}|undefined) }} options
  * @returns {Promise<string>}
  */
 const setup = async options => {
   try {
+    handleCommand(options, 'pre');
     const source = resolve(options.sourceDir, options.file);
     const target = resolve(
       process.cwd(),
@@ -40,7 +52,7 @@ const setup = async options => {
       options.file,
     );
     if (!existsSync(target)) copyFileSync(source, target);
-    if (options.command) logSuccess(execSync(options.command).toString());
+    handleCommand(options, 'post');
     return `✓ ${options.file} setup successful`;
   } catch (e) {
     throw new Error(`✖ ${options.file} setup failed: ${e.message}`);
