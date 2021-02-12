@@ -7,7 +7,7 @@ const FILE = '.gitconfig';
 
 run(
   setup({
-    command: `git config --local include.path ../${FILE}`,
+    commands: { post: `git config --local include.path ../${FILE}` },
     file: FILE,
     sourceDir: __dirname,
   }),

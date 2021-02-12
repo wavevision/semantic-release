@@ -5,7 +5,7 @@ const { run, setup } = require('../utils/setup');
 
 run(
   setup({
-    command: 'yarn husky install',
+    commands: { pre: 'yarn husky install' },
     file: 'commit-msg',
     sourceDir: __dirname,
     targetDir: '.husky',
