@@ -26,7 +26,7 @@ const {
  * }} options
  * @returns {object}
  */
-const makeConfig = function (options) {
+const makeConfig = options => {
   validateOptions(schema, options);
   const plugins = [
     [

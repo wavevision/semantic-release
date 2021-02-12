@@ -33,7 +33,7 @@ test('setup', async t => {
   const message = await setup({ command: ' ', file: FILE, sourceDir: DIR });
   t.is(message, '✓ file setup successful');
   t.true(existsSync(PATH));
-  await t.throwsAsync(setup({ file: '', sourceDir: '', targetDir: '' }), {
+  await t.throwsAsync(setup({ file: 'test', sourceDir: '' }), {
     instanceOf: Error,
   });
 });
