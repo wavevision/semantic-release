@@ -12,8 +12,7 @@ module.exports = {
     branches: {
       description: 'Branches on which releases should happen',
       type: 'array',
-      items: [{ type: 'string' }],
-      additionalItems: false,
+      items: { type: 'string' },
       minItems: 1,
     },
     rules: {
@@ -62,12 +61,7 @@ module.exports = {
         assets: {
           description: 'Relative paths to assets to be committed with release',
           type: 'array',
-          items: [
-            {
-              type: 'string',
-            },
-          ],
-          additionalItems: false,
+          items: { type: 'string' },
           minItems: 1,
         },
       },
