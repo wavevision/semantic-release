@@ -19,7 +19,7 @@ test('makeConfig', t => {
     rules: {
       major: { include: [':boom:'], exclude: [':sparkles:'] },
       minor: [':sparkles:'],
-      patch: [':bug:'],
+      patch: [':bug:', ':ambulance:'],
     },
     git: { enabled: true, assets: ['package.json'] },
     npm: { enabled: true },
@@ -43,7 +43,7 @@ test('makeConfig', t => {
           releaseRules: {
             major: { include: [':boom:'], exclude: [':sparkles:'] },
             minor: [':sparkles:'],
-            patch: [':bug:'],
+            patch: [':bug:', ':ambulance:'],
           },
         },
       ],

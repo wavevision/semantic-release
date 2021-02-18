@@ -37,8 +37,7 @@ const makeTemplate = (...basePath) => name =>
 const mapRule = rule => {
   const type = {
     type: 'array',
-    items: [{ type: 'string' }],
-    additionalItems: false,
+    items: { type: 'string' },
     minItems: 1,
   };
   return {
