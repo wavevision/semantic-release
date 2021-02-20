@@ -1,2 +1,9 @@
+# WARNING: Wrong indentation breaks markdown parsing and results in rendering plain text!
 [*.hbs]
+insert_final_newline = false
+
+[commit.*.hbs]
+indent_size = tab
+
+[notes.hbs]
 indent_size = 0
