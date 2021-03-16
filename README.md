@@ -1,8 +1,8 @@
 <p align="center"><a href="https://github.com/wavevision"><img alt="Wavevision s.r.o." src="https://wavevision.com/images/wavevision-logo.png" width="120" /></a></p>
 <h1 align="center">Semantic Release</h1>
 
-[![QA](https://github.com/wavevision/semantic-release/workflows/QA/badge.svg)](https://github.com/wavevision/semantic-release/actions?query=workflow%3AQA)
-[![Release](https://github.com/wavevision/semantic-release/workflows/Release/badge.svg)](https://github.com/wavevision/semantic-release/actions?query=workflow%3ARelease)
+[![QA](https://github.com/wavevision/semantic-release/workflows/QA/badge.svg)](https://github.com/wavevision/semantic-release/actions/workflows/qa.yml)
+[![Release](https://github.com/wavevision/semantic-release/workflows/Release/badge.svg)](https://github.com/wavevision/semantic-release/actions/workflows/release.yml)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![npm](https://img.shields.io/npm/v/@wavevision/semantic-release)](https://www.npmjs.com/package/@wavevision/semantic-release)
