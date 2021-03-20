@@ -43,7 +43,9 @@ const run = setup => {
 
 /**
  * @async
- * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: ({ pre: (string|undefined), post: (string|undefined)}|undefined) }} options
+ * @typedef {(string|undefined)} Command
+ * @typedef {{pre: Command, post: Command}} Commands
+ * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: (Commands|undefined) }} options
  * @returns {Promise<string>}
  */
 const setup = async options => {
