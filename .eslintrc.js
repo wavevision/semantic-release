@@ -5,6 +5,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
+    'plugin:jsdoc/recommended',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
@@ -27,5 +28,12 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off',
+  },
+  settings: {
+    jsdoc: {
+      preferredTypes: ['Promise'],
+    },
   },
 };
