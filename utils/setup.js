@@ -44,7 +44,7 @@ const run = setup => {
 /**
  * @async
  * @typedef {(string|undefined)} Command
- * @typedef {{pre: Command, post: Command}} Commands
+ * @typedef {{ pre: Command, post: Command }} Commands
  * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: (Commands|undefined) }} options
  * @returns {Promise<string>}
  */
