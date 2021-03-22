@@ -12,13 +12,16 @@ const {
 } = require('./constants');
 
 /**
+ * @typedef {(string[]|undefined)} ExcludeInclude
+ * @typedef {{ exclude: ExcludeInclude, include: ExcludeInclude}} RuleExcludeInclude
+ * @typedef {(RuleExcludeInclude|string[]|undefined)} Rule
  * @param {{
  *  config: string,
  *  branches: string[],
  *  rules: ({
- *    major: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined),
- *    minor: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined),
- *    patch: ({ exclude: (string[]|undefined), include: (string[]|undefined) }|string[]|undefined)
+ *    major: Rule,
+ *    minor: Rule,
+ *    patch: Rule
  *  }|undefined),
  *  templates: ({ notes: (string|undefined), commit: (string|undefined) }|undefined),
  *  git: ({ enabled: boolean, assets: (string[]|undefined) }|undefined),

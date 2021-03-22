@@ -12,7 +12,7 @@ const {
 
 /**
  * @param {object} options
- * @return {(object|undefined)}
+ * @returns {(object|undefined)}
  */
 const makeIssueResolution = options => {
   if (options.config === CONFIG_GITLAB) {

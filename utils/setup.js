@@ -22,24 +22,30 @@ const log = message =>
 
 /**
  * @param {Error} error
+ * @returns {void}
  */
 const logFailure = error => console.error(log(error.message));
 
 /**
  * @param {string} message
+ * @returns {void}
  */
 const logSuccess = message => console.log(log(message));
 
 /**
  *
  * @param {Promise<string>} setup
+ * @returns {void}
  */
 const run = setup => {
   setup.then(logSuccess).catch(logFailure);
 };
 
 /**
- * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: ({ pre: (string|undefined), post: (string|undefined)}|undefined) }} options
+ * @async
+ * @typedef {(string|undefined)} Command
+ * @typedef {{ pre: Command, post: Command }} Commands
+ * @param {{ file: string, sourceDir: string, targetDir: (string|undefined), commands: (Commands|undefined) }} options
  * @returns {Promise<string>}
  */
 const setup = async options => {
